@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "routes": [
+    { "src": "/api/auth/waiter", "dest": "/api/auth/waiter.js" },
+    { "src": "/api/orders/waiter", "dest": "/api/orders/waiter.js" },
+    { "src": "/api/orders/alerts", "dest": "/api/orders/alerts.js" },
+    { "src": "/api/orders/([^/]+)", "dest": "/api/orders/[id].js" },
+    { "src": "/api/orders", "dest": "/api/orders/index.js" },
+    { "src": "/api/telegram", "dest": "/api/telegram/index.js" },
+    { "src": "/health", "dest": "/api/health.js" }
+  ]
+}
